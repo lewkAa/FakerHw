@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id("io.freefair.lombok") version "8.13.1"
+    id 'io.qameta.allure' version '2.11.2'
 }
 
 group = 'ru.netology'
@@ -18,7 +20,8 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
     testImplementation 'com.codeborne:selenide:6.19.1'
-    testImplementation 'com.github.javafaker:javafaker:1.0.2'
+    implementation 'net.datafaker:datafaker:1.9.0'
+    implementation 'org.projectlombok:lombok:1.18.38'
 }
 
 test {
