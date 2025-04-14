@@ -26,7 +26,8 @@ public class DataGenerator {
     }
 
     public static String generateName(Faker faker) {
-        String name = (faker.name().firstName() + " " + faker.name().lastName());
+        String name = (faker.name().firstName().replace("ё", "е").replace("Ё", "Е")
+                + " " + faker.name().lastName().replace("ё", "е").replace("Ё", "Е"));
         return name;
     }
 
