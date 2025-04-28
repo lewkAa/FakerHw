@@ -7,12 +7,18 @@ plugins {
 group = 'ru.netology'
 version = '1.0-SNAPSHOT'
 
-sourceCompatibility = 11
-
-// кодировка файлов (если используете русский язык в файлах)
+java {
+    sourceCompatibility = 11
+}
 compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
 
+allure {
+    version = '2.20.1'
+    useJUnit5 {
+        version = '2.20.1'
+    }
+}
 repositories {
     mavenCentral()
 }
@@ -22,6 +28,7 @@ dependencies {
     testImplementation 'com.codeborne:selenide:6.19.1'
     testImplementation 'net.datafaker:datafaker:1.9.0'
     testImplementation 'org.projectlombok:lombok:1.18.38'
+    testImplementation 'io.qameta.allure:allure-selenide:2.20.1'
 }
 
 test {
